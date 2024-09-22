@@ -45,14 +45,14 @@
             </div>
         </div>
         <div class="home-img">
-            <img src="hmeee.png" width="400px">
+            <img src="assets/hmeee.png" width="400px">
         </div>
     </section>
 
     <!--ABOUT SECTION-->
     <section class="about" id="about">
         <div class="about-img">
-            <img src="./hmeee.png">
+            <img src="assets/hmeee.png">
         </div>
         <div class="about-content">
             <h2 class="heading">About <span class="me">Me</span></h2>
@@ -106,33 +106,35 @@
         <h2 class="heading">Latest <span class="porthead">Projects</span></h2>
         <div class="porfolio-container">
             <div class="portfolio-box">
-                <img src="./portfolio-img.avif">
+                <img src="assets/crave-cuisine.png">
                 <div class="portfolio-layer">
-                    <h4>Text To Speech Convertor</h4>
-                    <p>This is  simple text to speech convertor, which converts into different languages</p>
-                    <a href="https://vaibhavghugretkar.github.io/TextToSpeech/"><i class='bx bx-link-external'></i></a>
+                    <h4>Crave Cuisine</h4>
+                    <p>Restaurant landing website which displays information about the restaurant and its delightful
+                        dishes.</p>
+                    <a href="https://vaibhavghugretkar.github.io/CraveCuisine/"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
 
             <div class="portfolio-box">
-                <img src="./portfolio-img.avif">
+                <img src="assets/elevate-soles.png">
                 <div class="portfolio-layer">
-                    <h4>To Do List</h4>
-                    <p>This is Todo List, made from HTML CSS and Vanilla Javascript</p>
-                    <a href=" https://vaibhavghugretkar.github.io/ToDoList/"><i class='bx bx-link-external'></i></a>
+                    <h4>Elevate Soles</h4>
+                    <p>E-commerce website for shoes with user friendly UI to buy stylish and exotic shoes</p>
+                    <a href=" https://vaibhavghugretkar.github.io/e-commerce/"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
 
-            <div class="portfolio-container">
-                <div class="portfolio-box">
-                    <img src="./portfolio-img.avif">
-                    <div class="portfolio-layer">
-                        <h4>Nithya Foundation</h4>
-                        <p>This is website of a NGO named nithya foundation which spreads awareness about menstrual health and hygiene.</p>
-                        <a href="https://vaibhavghugretkar.github.io/nithya_ngo/"><i class='bx bx-link-external'></i></a>
-                    </div>
+            <div class="portfolio-box">
+                <img src="assets/music-class.png">
+                <div class="portfolio-layer">
+                    <h4>Music Class</h4>
+                    <p>This is Music Class website built with Next JS and accertinity UI. Built for clean and simple
+                        user interaction.</p>
+                    <a href="https://vaibhavghugretkar.github.io/MusicClass/"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
+
+        </div>
     </section>
 
     <section class="contact" id="contact">
@@ -147,7 +149,7 @@
                 <input type="text" id="emailsub" required placeholder="Email Subject">
             </div>
             <div class="texted">
-                <textarea name="" id="text-area"  required cols="28" rows="10" placeholder="Your Messege"
+                <textarea name="" id="text-area" required cols="28" rows="10" placeholder="Your Messege"
                     style="width: 1024px;height: 260px;"></textarea>
             </div>
             <input type="submit" value="Send Messege" class="btn">
@@ -179,25 +181,24 @@
         const emailsub = document.querySelector('#emailsub');
 
         function sendEmail() {
-    const bodyMessage = `Full Name: ${fullName.value} <br>Ph Number: ${phno.value}<br> Email: ${email.value} <br>Messege: ${message.value}`;
-    
-    Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "vaibhavghugretkar23@gmail.com",
-        Password: "CD34118FAB21BF79AD7105988F3083DCABE0",
-        To: 'vaibhavghugretkar23@gmail.com',
-        From: "vaibhavghugretkar23@gmail.com",
-        Subject: emailsub.value,
-        Body: bodyMessage
-    }).then(
-        message => {
-            alert("Message sent successfully !");
-            form.reset(); 
+            const bodyMessage =
+                `Full Name: ${fullName.value} <br>Ph Number: ${phno.value}<br> Email: ${email.value} <br>Messege: ${message.value}`;
+
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "vaibhavghugretkar23@gmail.com",
+                Password: "CD34118FAB21BF79AD7105988F3083DCABE0",
+                To: 'vaibhavghugretkar23@gmail.com',
+                From: "vaibhavghugretkar23@gmail.com",
+                Subject: emailsub.value,
+                Body: bodyMessage
+            }).then(
+                message => {
+                    alert("Message sent successfully !");
+                    form.reset();
+                }
+            );
         }
-    );
-}
-
-
     </script>
 </body>
 
